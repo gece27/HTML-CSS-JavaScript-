@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropdown menu</title>
+</head>
+<body>
+
+<style>
+    .dropmenu ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+.dropmenu li{
+  float: left;
+  position: relative;
+  width: 120px;
+}
+ 
+.dropmenu ul li ul{
+  display: none;
+}
+ 
+.dropmenu ul li:hover ul{
+  display: block;
+}
+ 
+.dropmenu ul li a{
+  text-decoration: none;
+  background: rgb(155, 124, 124);
+  display: block;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+  border-left: 1px solid #595959;
+  padding: 5px;
+}
+ 
+.dropmenu ul li ul li a{
+  background: #595959;
+  text-align: left;
+  padding: 5px;
+  border-bottom: 1px solid #333;
+  font-size: .8em;
+}
+ 
+.dropmenu li a:hover{
+  background: rgb(248,140,0);
+  transition: .5s;
+}
+.dropmenu ul li ul li a:hover{
+  background: cyan;
+}
+ 
+.dropmenu ul li ul li a:hover{
+  padding-left: 15px;
+  
+}
+ 
+</style>
+
+
+<nav class="dropmenu">
+    <ul>
+        <li><a href="#">YOUTUBE</a></li>
+
+        <li><a href="#">PYTHON</a>
+            <ul>
+                <li><a href="#">CONSOLE</a></li>
+                <li><a href="#">TKINTER</a></li>
+                <li><a href="#">KIVYMD</a></li>
+            </ul>  
+        </li>
+
+        <li><a href="#">Web</a>
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JAVASCRIPT</a></li>
+            </ul>  
+        </li>
+        
+        <li><a href="#">DATABASE</a>
+          <ul>
+            <li><a href="#">MSSQL</a></li>
+            <li><a href="#">MYSQL</a></li>
+            <li><a href="#">SQLITE</a></li>
+          </ul>  
+        </li>
+
+        
+    </ul>
+
+</nav>  
+
+    
+</body>
+</html>
