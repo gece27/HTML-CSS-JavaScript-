@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<style>
+.zz{
+  position: relative;
+  width: 250px;
+  height: 320px;  
+}
+.card{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.card:hover{
+  transform: rotateY(180deg);
+}
+.front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: aqua;
+  color: black;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 18px;  
+}
+.back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: coral;
+  color: bisque;
+  transform: rotateY(180deg);
+  text-align: center;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+</style>
+
+<div class="zz">
+  <div class="card" id="card">
+      <div class="front">
+        <img src="https://yt3.ggpht.com/0G_8JKxvqmsmQxWs1K_wAKlPyFGwGYV7nobQs2kNfxhFJ64zteT5NVT1lk4mDP5i_cmDFbTJ7rQ=s176-c-k-c0x00ffffff-no-rj" style="height:100% ;" alt="">
+
+      </div>
+      <div class="back">
+        <img src="https://yt3.ggpht.com/4Hu5PQiSRNLUB-25DA3rEvK6k0kCBbJ6QPKQQaQzBs4nDMGkY6KPEK_wwTKGGM0h-vJwIRgQVQ=s176-c-k-c0x00ffffff-no-rj"  style="height:100%" alt="">
+
+      </div>
+  </div>
+</div>
+
+
+</body>
+</html>
