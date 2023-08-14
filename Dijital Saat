@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijital Saat</title>
+</head>
+<body onload="digital();" > 
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Orbitron');
+    
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    
+    
+    .main{
+        background-color: #151615;
+        width: 425px;
+        height: 175px;
+        margin: 100px auto;
+        position: relative;
+        padding: 30px;
+    }
+    
+
+    .clock{
+        background: #999797;
+        text-align: center;
+        font-size: 55px;
+        height: 100%;
+        padding-top: 23px;
+        font-family: Orbitron;
+        border-radius: 4px;
+    }
+    .bir{
+        background: #b6c6f4;
+        text-align: center;
+        font-size:45px;
+        float: left;
+        width:85px;
+        height:75px;
+        margin-left:23px
+
+        
+    }
+    .iki{
+        background: #b6c6f4;        
+        text-align: center;
+        font-size:45px;
+        float: left;
+        width:85px;
+        height:75px;
+        margin-left:32px;
+        
+    }
+    .üc{
+        background: #b6c6f4;
+        text-align: center;
+        font-size:45px;        
+        float: left;
+        width:85px;
+        height:75px;
+        margin-left:25px;
+
+        
+    }
+
+    </style>
+<div class="main">
+		<div class="clock">
+      <div class="bir">
+        <span id="hour"></span>
+      </div>
+      <div class="iki">
+        <span id="minute"></span>
+    </div>
+      <div class="üc">
+        <span id="second"></span>      
+    </div>
+			
+	</div>
+</div>
+
+
+<script>
+    function digital() {
+    const fullDate = new Date();
+    var hours = fullDate.getHours();
+    var mins = fullDate.getMinutes();
+    var secs = fullDate.getSeconds();
+
+    if (hours < 10) {
+        hours = "0" + hours;
+    }
+    if (mins < 10) {
+        mins = "0" + mins;
+    }
+    if (secs < 10) {
+        secs = "0" + secs;
+    }
+
+    document.getElementById("hour").innerHTML = hours;
+    document.getElementById("minute").innerHTML =":" + mins;
+    document.getElementById("second").innerHTML =":" + secs;
+}
+
+setInterval(digital, 100);
+</script>
+
+</body>
+</html>
