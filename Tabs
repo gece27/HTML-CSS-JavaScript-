@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tabs</title>
+</head>
+<body>
+  
+
+  <style>
+
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+    
+    
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+    
+    .tab button:hover {
+      background-color: rgb(71, 54, 150);
+    }
+    
+    .tab button.active {
+      background-color: #ccc;
+    }
+    
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      
+      border-top: none;
+      text-align: center;
+    }
+    .tabcontent img{
+      width: 1150px;
+      height: 1000px;
+    }
+    
+    
+    </style>
+         
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'İstanbul')">İstanbul</button>
+        <button class="tablinks" onclick="openCity(event, 'Ankara')">Ankara</button>  
+        <button class="tablinks" onclick="openCity(event, 'Astana')">Astana</button>  
+        <button class="tablinks" onclick="openCity(event, 'Bakü')">Bakü</button>  
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+    </div>
+        
+    <div id="İstanbul" class="tabcontent">
+        <h3>İstanbul</h3>
+        <p>İstanbul is the most important city of Turkey</p>
+        <img src="https://media.timeout.com/images/105859738/image.jpg" alt="">
+    </div>
+        
+    <div id="Ankara" class="tabcontent">
+        <h3>Ankara</h3>
+        <p>Ankara is the capital of Turkey</p>
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/fd/6f/ankara.jpg?w=700&h=500&s=190380456.jpg" alt="">
+    </div>
+    
+    <div id="Astana" class="tabcontent">
+      <h3>Astana</h3>
+      <p>Astana is the capital of Kazakhistan</p>
+      <img src="https://media.cnn.com/api/v1/images/stellar/prod/120713042724-kazakhstan-astana.jpg?q=w_2700,h_1671,x_0,y_0,c_fill/h_618" alt=""> 
+    </div>
+    
+    <div id="Bakü" class="tabcontent">
+      <h3>Bakü</h3>
+      <p>Bakü is the capital of Azerbaijan</p>
+      <img src="https://cdnp.flypgs.com/files/Sehirler-long-tail/Baku/baku-gezi-rehberi.jpg" alt=""> 
+    </div>
+    
+    <div id="Tokyo" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+        <img src="https://www.hisglobal.com.tr/assets/images/uploads/1583759608.jpg" alt="">
+    </div>
+    
+    
+    <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    
+    </script>
+        
+</body>
+</html>
